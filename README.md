@@ -4,12 +4,13 @@ streaming
 
 <!-- TOC -->
 
-- [Introduction](#introduction)
-- [Basic Usage](#basic-usage)
-    - [Installation](#installation)
-    - [Usage](#usage)
-- [Credits](#credits)
-- [Licenses](#licenses)
+- [streaming](#streaming)
+	- [Introduction](#introduction)
+	- [Basic Usage](#basic-usage)
+		- [Installation](#installation)
+		- [Usage](#usage)
+	- [Credits](#credits)
+	- [Licenses](#licenses)
 
 <!-- /TOC -->
 
@@ -60,7 +61,7 @@ func main() {
 		"output-topic",
 		cluster.NewConfig(),
 		Processor); err != nil {
-		log.Println(err)
+		log.Panic(err)
 	}
 
 	signals := make(chan os.Signal, 1)
