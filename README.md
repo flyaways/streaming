@@ -1,5 +1,9 @@
-streaming
-====================
+#streaming
+[![Go Report Card](https://goreportcard.com/badge/github.com/flyaways/streaming?style=flat-square)](https://goreportcard.com/report/github.com/flyaways/streaming)
+[![Build Status Travis](https://travis-ci.org/flyaways/streaming.svg?branch=master)](https://travis-ci.org/flyaways/streaming)
+[![Build Status Semaphore](https://semaphoreci.com/api/v1/flyaways/streaming/branches/master/shields_badge.svg)](https://semaphoreci.com/flyaways/streaming)
+[![LICENSE](https://img.shields.io/badge/licence-Apache%202.0-brightgreen.svg?style=flat-square)](https://github.com/flyaways/color/blob/master/LICENSE)
+
 ![streaming](./kafka_diagram.png "streaming")
 
 <!-- TOC -->
