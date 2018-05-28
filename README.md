@@ -1,6 +1,7 @@
 streaming
 ====================
 ![streaming](./kafka_diagram.png "streaming")
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fflyaways%2Fstreaming.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fflyaways%2Fstreaming?ref=badge_shield)
 
 <!-- TOC -->
 
@@ -79,3 +80,6 @@ func main() {
 ## Licenses
 
 [https://www.apache.org/licenses/LICENSE-2.0](https://www.apache.org/licenses/LICENSE-2.0)
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fflyaways%2Fstreaming.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fflyaways%2Fstreaming?ref=badge_large)
