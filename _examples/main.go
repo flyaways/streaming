@@ -10,20 +10,24 @@ import (
 	"github.com/flyaways/streaming"
 )
 
-func Processor(msg *sarama.ConsumerMessage, outTopic string) (*sarama.ProducerMessage, error) {
-	return &sarama.ProducerMessage{
-		Topic: outTopic,
-		Key:   sarama.ByteEncoder(msg.Key),
-		Value: sarama.ByteEncoder(msg.Value),
-	}, nil
+func Processor(msg *sarama.ConsumerMessage, outTopic []string) ([]*sarama.ProducerMessage, error) {
+	msgs := []*sarama.ProducerMessage{}
+	if msg.Topic == "input-topic-2" {
+		msgs = append(msgs, &sarama.ProducerMessage{
+			Topic: outTopic[0],
+			Key:   sarama.ByteEncoder(msg.Key),
+			Value: sarama.ByteEncoder(msg.Value),
+		})
+	}
+	return msgs, nil
 }
 
 func main() {
 	if err := streaming.NewStreaming(
 		[]string{"127.0.0.1:9092"},
-		[]string{"input-topic", "input-topic-2"},
-		"streaming-group",
-		"output-topic",
+		[]string{"input-topic1", "input-topic-2"},
+		[]string{"output-topic1", "output-topic"},
+		"flyaways-streaming-group",
 		cluster.NewConfig(),
 		Processor); err != nil {
 		log.Panic(err)

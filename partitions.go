@@ -21,7 +21,10 @@ func (s *Streaming) modePartitions() {
 							s.Logger.Printf("Error: %v\n", err)
 						}
 
-						s.producer.Input() <- producerMessage
+						for _, m := range producerMessage {
+							s.producer.Input() <- m
+						}
+
 						s.consumer.MarkOffset(msg, "")
 					}
 				}(part)

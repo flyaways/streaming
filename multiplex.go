@@ -14,7 +14,9 @@ func (s *Streaming) modeMultiplex() {
 					continue
 				}
 
-				s.producer.Input() <- producerMessage
+				for _, m := range producerMessage {
+					s.producer.Input() <- m
+				}
 
 				s.consumer.MarkOffset(msg, "")
 			}
