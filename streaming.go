@@ -8,11 +8,12 @@ import (
 	cluster "github.com/bsm/sarama-cluster"
 )
 
+//Streaming config
 type Streaming struct {
 	SeedBrokers []string
 	Config      *cluster.Config
 	InTopic     []string
-	OutTopic    string
+	OutTopic    []string
 	GroupID     string
 	CallBack    CallBack
 	Logger      sarama.StdLogger
@@ -22,7 +23,8 @@ type Streaming struct {
 	producer sarama.AsyncProducer
 }
 
-func NewStreaming(seedbrokers, inTopic []string, groupID, outTopic string, config *cluster.Config, cb CallBack) (err error) {
+//NewStreaming New Streaming
+func NewStreaming(seedbrokers, inTopic, outTopic []string, groupID string, config *cluster.Config, cb CallBack) (err error) {
 	s := &Streaming{
 		Config:      config,
 		SeedBrokers: seedbrokers,
@@ -37,6 +39,7 @@ func NewStreaming(seedbrokers, inTopic []string, groupID, outTopic string, confi
 	return NewWithConfig(s)
 }
 
+//NewWithConfig New With Config
 func NewWithConfig(s *Streaming) (err error) {
 	s.signals = make(chan os.Signal, 1)
 	signal.Notify(s.signals, os.Interrupt)

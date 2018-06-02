@@ -13,7 +13,7 @@ func TestStreaming_processor(t *testing.T) {
 		SeedBrokers []string
 		Config      *cluster.Config
 		InTopic     []string
-		OutTopic    string
+		OutTopic    []string
 		GroupID     string
 		CallBack    CallBack
 		Logger      sarama.StdLogger
