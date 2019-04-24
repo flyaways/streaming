@@ -3,6 +3,7 @@
 [![Build Status Travis](https://travis-ci.org/flyaways/streaming.svg?branch=master)](https://travis-ci.org/flyaways/streaming)
 [![Build Status Semaphore](https://semaphoreci.com/api/v1/flyaways/streaming/branches/master/shields_badge.svg)](https://semaphoreci.com/flyaways/streaming)
 [![LICENSE](https://img.shields.io/badge/licence-Apache%202.0-brightgreen.svg?style=flat-square)](https://github.com/flyaways/streaming/blob/master/LICENSE)
+[![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
 
 ![streaming](./kafka_diagram.png "streaming")
 
